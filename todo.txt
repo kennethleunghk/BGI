@@ -1,0 +1,16 @@
+Todo
+1 Added ELSA parts content need to fix form iPad vertical layout
+1	7 pipeline pic with real price & content
+2	BUY 4 client page key images
+
+
+Fix
+1	Nav submenu click color in iPad
+3	small screen top bar color & layout
+
+Mobile version
+iPad landscape OK
+iPad Portrait 
+1) Pop up Name field (May fix by popup width
+
+			

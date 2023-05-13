@@ -1,0 +1,309 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BGI Online</title>
+        <link rel="stylesheet" href="css/foundation.css" />
+        <link rel="stylesheet" href="css/customize.css" />
+
+        <script src="js/vendor/modernizr.js"></script>
+    </head>
+  <body>
+      <div class="contain-to-grid">
+        <nav class="top-bar" data-topbar role="navigation" data-options="mobile_show_parent_link: false">
+                <ul class="title-area">
+                    <li class="name">
+                    <h1><a href="index.html"><img src="img/logo_bgi.png" alt="BGI Online"></a></h1>
+                    </li>
+                    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                </ul>
+
+            <section class="top-bar-section">
+            <!-- Right Nav Section -->
+                <ul class="right">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="pipeline.html">Pipelines</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">Use Cases</a>
+                        <ul class="dropdown">
+                            <li><a href="case01.html">Sequencing Provider</a></li>
+                            <li><a href="case02.html">Diagnostic Test Providers</a></li>
+                            <li><a href="case03.html">Biopharmaceutical R&D</a></li>
+                            <li><a href="case04.html">Genome Centre</a></li>                            
+                        </ul>
+                    </li>
+                    <li><a href="https://app.bgionline.com">Login</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" data-reveal-id="myModal">Signup</a></li>
+                </ul>
+            </section>
+        </nav>
+      </div>
+    
+      
+        <div class="row" id="pipeline">
+            <br>
+            <center>
+            <div class="panel radius">
+              <h2>Pipelines and Cost Estimates</h2>  
+            </div>
+                
+            <div class="medium-11">
+                <ul class="tabs" data-tab>
+                    <li class="tab-title active">
+                        <a href="#panel0"><span>ELSA</span></a></li>
+                    <li class="tab-title">
+                        <a href="#panel1"><span>Whole Exome Analysis - BWA + GATK 2.3.9-Lite (with Metrics)</span></a></li>
+                    <li class="tab-title">
+                        <a href="#panel2"><span>Whole Genome Analysis - BWA + GATK 2.3.9-Lite (with Metrics)</span></a></li>
+                    <li class="tab-title">
+                        <a href="#panel3"><span>RNA-Seq Differential Expression - Cuffdiff (with Visualization)</span></a></li>
+                    <li class="tab-title"><a href="#panel4"><span>RNA-Seq Alignment <br>- TopHat</span></a></li>
+                    <li class="tab-title"><a href="#panel5"><span>RNA-Seq Alignment <br>- STAR</span></a></li>
+                    <li class="tab-title" style="display:none;"><a href="#panel6"><span>Protein structure and function prediction pipeline with I-TASSER</span></a></li>
+                    <li class="tab-title" style="display:none;"><a href="#panel7"><span>Mendelian disease analysis pipeline</span></a></li>
+                    <li class="tab-title" style="display:none;"><a href="#panel8"><span>Mutation annotation pipeline with HGMD</span></a></li>
+                </ul>
+                <div class="tabs-content">
+                    <div class="content active" id="panel0">
+                        <div class="medium-8 column pic">
+                        <img src="img/pipe_pic0.gif" class="pipepic" alt="ELSA"></div>
+                        <div class="medium-4 column content">
+                        <h3>ELSA</h3>
+                        <div class="estimate">50x coverage WGS (150GB): <b>4 hours</b></div>
+                        <div class="estimate">200x coverage WES (10G): <b>15 mins</b></div>
+                        </div>
+                        <div class="description">
+                            <div class="medium-7 column">
+                                <h4>About ELSA</h4>
+                                ELSA is an economic, fast and accurate solution for the secondary analysis of next generation sequencing data.<br><br>
+
+From raw reads to variants, including single nucleotide polymorphism (SNP) and insertion and deletion (INDEL), ELSA takes about 4 hours to process a 50-fold whole genome sequence (WGS) sample, or 10 minutes for a 200-fold whole exome sequence (WES) sample. <br><br>
+
+ELSA’s speed is rooted at its parallel algorithms to effectively exploit a CPU SIMD, or a GPU to speed up processes like alignment, score recalibration, INDEL realignment, de-duplication and variant calling. <br><br>
+
+ELSA incorporates a 16-genotype model to support the calling of SNPs and INDELs. Validation of the final results with the NIST Genome In A Bottle standard demonstrates that ELSA analysis pipeline has the highest combined sensitivity and precision.<br><br>
+                            </div>
+                            
+                            <div class="medium-4 column content">
+                            <h4>Developer</h4>
+                            <p><a href="http://www.l3-bioinfo.com" target="_blank">L3 Bioinformatics</a></p>
+                            <h4>More Information</h4>
+                            <p><a href="https://peerj.com/articles/421/#p-1" target="_blank">ELSA Academic Paper</a><br>
+                               <a href="http://www.bioplanet.com/gcat/reports/5236-lyjfvvatdd/variant-calls/illumina-100bp-pe-exome-150x/ELSA-gcat-illumina-150x/compare-571-2319/group-read-depth" target="_blank">ELSA Benchmark Results on GIAB</a><br>
+                               <a href="http://www.l3-bioinfo.com/products/ELSA">ELSA - L3 BioInformatics</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content" id="panel1">
+                        <div class="medium-12 column pic">
+                        <img src="img/pipe_pic1.gif" class="pipepic" 
+                             alt="Whole Exome Analysis - BWA + GATK 2.3.9-Lite (with Metrics)"></div>
+                        <div class="medium-4 column content hide">
+                        <h3>Whole Exome Analysis - BWA + GATK 2.3.9-Lite</h3>
+                        <div class="estimate">30x coverage (12GB) <b>≈ $X*</b></div>
+                        <div class="estimate">50x coverage (26GB) <b>≈ $X*</b></div>
+                        </div>
+                    </div>
+                    <div class="content" id="panel2">
+                        <div class="medium-12 column pic">
+                        <img src="img/pipe_pic2.gif" class="pipepic" 
+                             alt="Whole Genome Analysis - BWA + GATK 2.3.9-Lite (with Metrics)"></div>
+                        <div class="medium-4 column content hide">
+                        <h3>Whole Genome Analysis - BWA + GATK 2.3.9-Lite (with Metrics)</h3>
+                        <div class="estimate">30x coverage (12GB) <b>≈ $X*</b></div>
+                        <div class="estimate">50x coverage (26GB) <b>≈ $X*</b></div>
+                        </div>
+                    </div>
+                    <div class="content" id="panel3">
+                        <div class="medium-12 column pic">
+                        <img src="img/pipe_pic3.gif" class="pipepic" 
+                             alt="RNA-Seq Differential Expression - Cuffdiff (with Visualization)"></div>
+                        <div class="medium-4 column content hide">
+                        <h3>RNA-Seq Differential Expression - Cuffdiff (with Visualization)</h3>
+                        <div class="estimate">30x coverage (12GB) <b>≈ $X*</b></div>
+                        <div class="estimate">50x coverage (26GB) <b>≈ $X*</b></div>
+                        </div>
+                    </div>
+                    <div class="content" id="panel4">
+                        <div class="medium-12 column pic">
+                        <img src="img/pipe_pic4.gif" class="pipepic" 
+                             alt="RNA-Seq Alignment - TopHat"></div>
+                        <div class="medium-4 column content hide">
+                        <h3>RNA-Seq Alignment <br>- TopHat</h3>
+                        <div class="estimate">30x coverage (12GB) <b>≈ $X*</b></div>
+                        <div class="estimate">50x coverage (26GB) <b>≈ $X*</b></div>
+                        </div>
+                    </div>
+                    <div class="content" id="panel5">
+                        <div class="medium-12 column pic">
+                        <img src="img/pipe_pic5.gif" class="pipepic" 
+                             alt="RNA-Seq Alignment - STAR"></div>
+                        <div class="medium-4 column content hide">
+                        <h3>RNA-Seq Alignment <br>- STAR</h3>
+                        <div class="estimate">30x coverage (12GB) <b>≈ $X*</b></div>
+                        <div class="estimate">50x coverage (26GB) <b>≈ $X*</b></div>
+                        </div>
+                    </div>
+                    <div class="content" id="panel6">
+                        <div class="medium-12 column pic">
+                        <img src="img/pipe_pic6.gif" class="pipepic" 
+                             alt="Protein structure and function prediction pipeline with I-TASSER"></div>
+                        <div class="medium-4 column content hide">
+                        <h3>Protein structure and function prediction pipeline <br>with I-TASSER</h3>
+                        <div class="estimate">30x coverage (12GB) <b>≈ $X*</b></div>
+                        <div class="estimate">50x coverage (26GB) <b>≈ $X*</b></div>
+                        </div>
+                    </div>
+                    <div class="content" id="panel7">
+                        <div class="medium-8 column pic">
+                        <img src="img/pipe_pic7.gif" class="pipepic" 
+                             alt="Mendelian disease analysis pipeline"></div>
+                        <div class="medium-4 column content">
+                        <h3>Mendelian disease analysis pipeline</h3>
+                        <div class="estimate">30x coverage (12GB) <b>≈ $X*</b></div>
+                        <div class="estimate">50x coverage (26GB) <b>≈ $X*</b></div>
+                        </div>
+                    </div>
+                    <div class="content hide" id="panel8">
+                        <div class="medium-8 column pic">
+                        <img src="img/pipe_pic8.gif" class="pipepic" 
+                             alt="Mutation annotation pipeline with HGMD"></div>
+                        <div class="medium-4 column content">
+                        <h3>Mutation annotation pipeline with HGMD</h3>
+                        <div class="estimate">30x coverage (12GB) <b>≈ $X*</b></div>
+                        <div class="estimate">50x coverage (26GB) <b>≈ $X*</b></div>
+                        </div>
+                    </div>
+                  
+                </div>
+                <p></p>
+            </div>
+            
+            </center>
+            <br>
+        </div>
+      
+        <div class="row hide">
+        <center>
+            <a href="#" class="button alert radius signup_big" data-reveal-id="myModal">Sign Up</a>
+        </center>
+            <br>
+        </div>
+      
+        <div class="footer">
+            <div class="row">
+                <div class="medium-2 columns">
+                    <h6>BGI ONLINE</h6>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pipeline.html">Pipelines</a></li>
+                    </ul>
+                </div>
+                <div class="medium-2 columns">
+                    <h6>USE CASES</h6>
+                    <ul>
+                        <li><a href="case01.html">Sequencing Provider</a></li>
+                        <li><a href="case02.html">Diagnostic Test Providers</a></li>
+                        <li><a href="case03.html">Biopharmaceutical R&D</a></li>
+                        <li><a href="case04.html">Genome Centre</a></li>                        
+                    </ul>
+                </div>
+                <div class="medium-2 columns">
+                    <h6>GUIDES</h6>
+                    <ul>
+                        <li><a href="http://l3sdk.l3-bioinfo.com/" target="_blank">SDK Documentation</a></li>
+                        <li><a href="files/CLI_user_guide.pdf" target="_blank">API Documentation</a></li>
+                        <li><a href="files/SecurityWhitePaper.pdf" target="_blank">Security White Paper</a></li>
+                    </ul>
+                </div>
+                <div class="medium-2 columns end">
+                    <h6>PARTNERS</h6>
+                    <ul>
+                        <li><a href="http://www.genomics.cn/" target="_blank">BGI - Tech</a></li>
+                        <li><a href="http://l3-bioinfo.com/" target="_blank">L3 Bioinformatics</a></li>                        
+                    </ul>
+                </div>
+                <div class="medium-3 columns">
+                    <h6>Contact us</h6>
+                    <ul>
+                        <li>BGI Online</li>
+                        <li>Main Building, Beishan Industrial Zone, Yantian District, Shenzhen, 518083, China</li>
+                        <li>Tel: 400-706-6615</li>
+                        <li><a href="mailto:bgionline@genomics.cn">bgionline@genomics.cn</a></li>
+                        <li><a href="mailto:bgionline@l3-bioinfo.com">bgionline@l3-bioinfo.com</a></li>
+                    </ul>
+                </div>
+                
+                
+            </div>
+        </div>
+      
+        <div id="myModal" class="reveal-modal large" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+            <div class="row">
+                <div class="medium-7 column" id="requestform">
+                    <h2 id="modalTitle">Request Invitation</h2>
+                    <p>BGI staff, clients and partners only.</p>
+            <form data-abide>
+                <div class="row">
+                    <div class="name-field">
+                    <div class="small-3 columns">
+                    <label for="name" class="right inline"><small>*</small> Name: </label>
+                    </div>
+                    <div class="small-8 columns end">
+                    <input type="text" id="name" class="radius" required placeholder="Your name">
+                    <small class="error">Name is required.</small>
+                    </div>
+                    </div>
+                    
+                    <div class="email-field">
+                    <div class="small-3 columns">
+                    <label for="email" class="right inline"><small>*</small> Email: </label>
+                    </div>
+                    <div class="small-8 columns end">
+                        <input type="email" id="email" class="radius" required placeholder="youname@email.com">
+                        <small class="error">Valid email address is required.</small>                        
+                    </div>                    
+                    </div>
+                    
+                    <div class="name-field">
+                    <div class="small-3 columns">
+                    <label for="org" class="right inline">Organisation: <br><small></small></label>
+                    </div>
+                    <div class="small-8 columns end">
+                    <input type="text" id="org" class="radius" placeholder="Your organisation:">
+                    <small class="error"></small>
+                    </div>
+                    </div>
+                    
+                    <div class="small-12">
+                        <center>
+                        <button type="submit" class="button signup_big radius">Send Request</button>
+                        </center>
+                    </div>                    
+                </div>                
+            </form>
+                </div>            
+                <div class="medium-5 large-4 column">
+                    <h2>Contact Us</h2>
+                    <p>BGI - Shenzhen<br>
+                        <sub>Main Building, Beishan Industrial Zone, Yantian District, Shenzhen, 518083, China<br>
+                        Tel: 400-706-6615<br>
+                    <a href="mailto:bgionline@genomics.cn">bgionline@genomics.cn</a> &amp;<br><a href="mailto:bgionline@l3-bioinfo.com">bgionline@l3-bioinfo.com</a></sub>
+                    </p>                    
+                </div>
+            </div>
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+      
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/foundation/foundation.orbit.js"></script>
+    <script>
+      $(document).foundation();
+        $(document).foundation('tab', 'reflow');
+    </script>
+  </body>
+</html>

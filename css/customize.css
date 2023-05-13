@@ -1,0 +1,367 @@
+@import url("fonts.css");
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);*/
+
+body, p, a, button, .button, .top-bar-section ul li > a  {font-family: 'Open Sans', sans-serif; font-weight: 300;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Open Sans', sans-serif; }
+
+/* Nav bar */
+.top-bar { height: 6.25rem; line-height: 6.25rem;   background: #fff;}
+.top-bar .name { height: auto; margin-top: 1.3rem;}
+.top-bar-section {padding-top: 1.8rem;}
+.top-bar-section ul li > a { font-size: 0.9375rem; font-weight: 400; }
+.dropdown { border: 1px solid #d4d4d4;}
+
+.top-bar-section li:not(.has-form) a:not(.button) {/*basic color */
+    background: #fff; color:#231f20; border-bottom: 3px solid #fff;}
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+    background: #fff; color:#231f20; border-bottom: 3px solid #1983dd;}
+
+.top-bar-section li.active:not(.has-form) a:not(.button) {/* active basic color */
+    background: #fff; color:#231f20;    border-bottom: 3px solid #1983dd;}
+.top-bar-section li.active:not(.has-form) a:not(.button):hover {/* active basic color */
+    background: #fff; color:#231f20;}
+
+.top-bar-section li.active:not(.has-form) .dropdown a:not(.button) {/* active dropdown sub menu color */
+    background: #2181d5 ; color:#fff;}
+.top-bar-section ul li:hover:not(.has-form) > a{ background: #fff; color:#231f20; }/* fix dropdown parent color */
+
+/* remove submenu style */
+.top-bar-section li:not(.collapse) { margin-left:0.625rem;/*10px*/}
+.top-bar-section .dropdown li { margin: 0; }
+.top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) { background: #fff; color:#231f20; border: 0px;}
+.top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button):hover { background: #1983dd; color:#fff; border: 0px;}
+
+.top-bar-section .has-dropdown > a:after {/* Arrow color */
+    border-color: #231f20 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+
+/* try to break fix nav bar when iPad */
+/*
+.fixed {
+  width: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+.f-topbar-fixed {
+  padding-top: 104px;
+}
+*/
+
+/* Bg Color */
+.contain-to-grid {background: #fff; border-bottom: 4px solid #f1f1f1;}
+.top-bar {background: #fff;}
+
+/* Modal popup */
+.reveal-modal { background:#000; background:rgba(0,0,0,0.5); color: #fff;}
+.reveal-modal h2{color: #fff;} .reveal-modal p {font-size: 1.125rem;}
+.reveal-modal-bg { background:rgba(1,58,107,0.5);}
+
+.reveal-modal label { color:#fff; line-height: 1.3} .reveal-modal label small{ color:aqua;}
+.reveal-modal label.error { color:#fff;}
+.reveal-modal table {width: 100%;}
+table {  background: transparent;   margin-bottom: 0;  border: 0px;}
+table tr.even, table tr.alt, table tr:nth-of-type(even){background: transparent;}
+table tr th, table tr td { color: #fff;  padding: 0;}
+.name-field, .email-field { clear: both;}
+.reveal-modal a:hover {  color: aqua;}
+.reveal-modal #requestform { border-right: 1px solid #939ba2;}
+
+.reveal-modal .button.signup_big { width: 78%; margin-top: 10px;}
+.reveal-modal small { font-size: 10px;}
+
+
+/* Hero Banner section */
+#hero   {
+    min-height: 300px;
+    padding-top: 1.8%;/*32px*/   margin-bottom: 2.25rem;/*36px*/
+    background:#2ea2dd url("../img/hero.jpg") no-repeat;
+    background-size: 100%; text-shadow: 0 0 5px #2E596B;
+}
+#hero h1{ font-size: 2.25rem; line-height:1.2;}
+#hero p{ font-size: 1.1rem; line-height:1.3; margin-bottom:0.6rem; letter-spacing:0.04rem}
+#hero h1, #hero p { margin-left: 5.4%;    color:#fff;}
+
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+/*
+@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: portrait) {
+    #hero p { width: 84%;}
+}*/
+
+/* Sign up button */
+.button.signup_big {
+    width: 260px; font-size: 1.75rem; padding: 0.4rem 0 0.5rem 0;     
+    
+    background: #ee5353;
+    background: -moz-linear-gradient(top,  #ee5353 0%, #cf2323 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ee5353), color-stop(100%,#cf2323));
+    background: -webkit-linear-gradient(top,  #ee5353 0%,#cf2323 100%);
+    background: -o-linear-gradient(top,  #ee5353 0%,#cf2323 100%);
+    background: -ms-linear-gradient(top,  #ee5353 0%,#cf2323 100%);
+    background: linear-gradient(to bottom,  #ee5353 0%,#cf2323 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee5353', endColorstr='#cf2323',GradientType=0 );
+}
+.button.signup_big:hover{
+    background: #e51717;
+    background: -moz-linear-gradient(top,  #e51717 0%, #a11b1b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e51717), color-stop(100%,#a11b1b));
+    background: -webkit-linear-gradient(top,  #e51717 0%,#a11b1b 100%);
+    background: -o-linear-gradient(top,  #e51717 0%,#a11b1b 100%);
+    background: -ms-linear-gradient(top,  #e51717 0%,#a11b1b 100%);
+    background: linear-gradient(to bottom,  #e51717 0%,#a11b1b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e51717', endColorstr='#a11b1b',GradientType=0 );
+}
+
+
+
+/* cases page */
+#cases { background:url("../img/hero_case_bg.jpg") repeat-x center top; min-height: 390px;
+margin-top: 1px; padding-top: 1.5rem;/*24px*/ margin-bottom: 4.5rem;}
+#cases, #cases h6, #cases h2 {color: #707173;}
+#cases h6 { font-weight: 300;}
+#cases h2 { letter-spacing: -0.125rem;/*-2px*/ margin-bottom: 0.7rem;}
+#cases .casepic { margin-top: -0.75rem;/* -12px*/ margin-bottom:0.75rem; }
+/* Section Header */
+.panel  { background: #c7c7c7; width: 95%; padding: 0.5rem 1.25rem 0.6rem 1.25rem; margin-bottom: 2.25rem;}
+.panel  h2 { color:#fff; font-size:1.875rem;}
+#cases .button.signup_big {font-size: 1.4rem; width: 100%;} /*adjust signup button size */
+
+/* Learn more button */
+.button.learnmore {
+    width: 100%; font-size: 1.4rem; padding: 0.4rem 0 0.5rem 0;  
+    
+    background: #5ba2cc;
+    background: -moz-linear-gradient(top,  #5ba2cc 0%, #3274a9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5ba2cc), color-stop(100%,#3274a9));
+    background: -webkit-linear-gradient(top,  #5ba2cc 0%,#3274a9 100%);
+    background: -o-linear-gradient(top,  #5ba2cc 0%,#3274a9 100%);
+    background: -ms-linear-gradient(top,  #5ba2cc 0%,#3274a9 100%);
+    background: linear-gradient(to bottom,  #5ba2cc 0%,#3274a9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ba2cc', endColorstr='#3274a9',GradientType=0 );
+}
+.button.learnmore:hover{
+    background: #398ab9;
+    background: -moz-linear-gradient(top,  #398ab9 0%, #295f8b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#398ab9), color-stop(100%,#295f8b));
+    background: -webkit-linear-gradient(top,  #398ab9 0%,#295f8b 100%);
+    background: -o-linear-gradient(top,  #398ab9 0%,#295f8b 100%);
+    background: -ms-linear-gradient(top,  #398ab9 0%,#295f8b 100%);
+    background: linear-gradient(to bottom,  #398ab9 0%,#295f8b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#398ab9', endColorstr='#295f8b',GradientType=0 );
+}
+
+/* How it work */
+#howitwork .medium-3{ width: 24.96%; padding-top:9rem; margin-bottom: 2.25rem;/*36px*/ color:#9b9b9b;}
+#step1 {background:url("../img/step1.png") no-repeat center 0rem;}
+#step2 {background:url("../img/step2.png") no-repeat center 0rem;}
+#step3 {background:url("../img/step3.png") no-repeat center 0rem;}
+#step4 {background:url("../img/step4.png") no-repeat center 1rem;}
+#step1, #step2, #step3, #step4 { background-size:50% auto ;}
+
+#howitwork h3 { color:#1983dd; margin-bottom: 0;}
+#howitwork hr { margin:2.25rem auto;/*36px*/}
+.steparrow { margin: 50px -4.15% 0 -4.15% ;}
+
+/* FAQ & learn more*/
+.twocolumns .content {width: 90%; margin: 0 auto; }
+.twocolumns h3 {font-size: 1.375rem;/*22px*/ color: #1983dd; }
+.twocolumns a { text-decoration: underline;}
+.twocolumns p {color: #707173;}
+/* learn more section */
+#Learnmore .panel  { background: #f2f2f2; width: 95%; padding: 3.4rem 1.25rem 3.3rem 1.25rem; margin-bottom: 2.25rem; border: 0;}
+#Learnmore .panel h2 { color:#707173; font-size:2.25rem;}
+
+/* Pipeline page */
+.tabs dd, .tabs .tab-title{/* li */
+    width:19.6%; /* divide by 5 */
+    margin:0.2% 0 0 0.2%;
+}
+.tabs dd > a, .tabs .tab-title > a{
+    background: #f4f4f4;
+    padding: 0;
+    font-size: 0.8125rem;
+    color:#808080;
+    border: 1px solid #cfcfcf;    
+    
+}
+.tabs dd.active a, .tabs .tab-title.active a {background: #2181d5; color: #fff;}
+.tabs dd > a span, .tabs .tab-title > a span{
+    height: 4.375rem;     display: table-cell;    vertical-align: middle;
+}
+
+#pipeline .pipepic {border: 1px solid #cfcfcf;}
+#pipeline h3 { margin:2.25rem 0;  color: #1983dd; font-size:1.5rem; }
+#pipeline .estimate { margin: 10px auto 10px 0; line-height: 4rem; border-bottom: 1px solid #cfcfcf; text-align: left; text-indent: 1rem; }
+#pipeline .estimate b { float: right; color:#1983dd; font-size:1.375rem; text-indent: 0; }
+.tabs-content .column, .tabs-content .columns { padding: 0;}
+.tabs-content .description{ clear: both; text-align: left; margin:0 1rem; padding-top: 1rem; width: auto;}
+.tabs-content h4 { color: #1983dd; font-size:1.2rem; }
+
+/* Footer */
+.footer { 
+    background:#499ce2 url("../img/footer_bg.jpg") repeat-x 0 bottom; min-height: 12.5rem;/*200px*/ 
+    color: #fff; padding-top: 1.75rem;/*28px*/
+}
+.footer ul {list-style-type: none; margin: 0; font-size:0.8125rem; line-height:1.94;}
+.footer h6, .footer a{ color: #fff; }
+.footer h6{font-size: 0.9375rem; margin-bottom: 0.2rem;}
+.footer a:hover{ color: aqua;}
+
+
+/* ------  Fix for Tablet screen ------ */
+
+/* iPad or below */
+@media only screen and (max-device-width: 63em){
+    /* nav*/
+    .top-bar {height: 4.5rem;}.top-bar .name {margin-top: 0.8rem;}
+    .top-bar-section {padding-top: 0.8rem;}
+    .top-bar .title-area img {max-width: 80%;}
+    /* Hero */
+    .panel, #hero  { margin-bottom: 1.25rem;}
+    #hero p{font-weight:400;}
+    /* How it work */
+    #howitwork hr { margin: 1.25rem auto;} 
+    #howitwork #step1, #howitwork #step2, #howitwork #step3, #howitwork #step4 { background-size:50%; padding-top: 7rem }
+    #howitwork #step1 br { display: none;}
+    #howitwork h3 { line-height: 1.8rem; font-size: 1.6rem; margin-bottom: 0.5rem;} #howitwork div { line-height: 1.2rem;}
+    
+    #pipeline h3 { margin: 1rem 0 0 0;} #pipeline .estimate { margin: 0 auto;}
+    
+    #cases { margin-bottom: 1rem;}
+    #cases .casepic {margin-top: 0;margin-bottom: 0;}
+    #cases .column {padding:0;} #cases .medium-6 {padding:0.5rem;} 
+    #cases .medium-11 { width: 98%;}
+}
+
+/* iPad & portrait (min-768 to max-1024) */
+@media only screen and (min-device-width: 40.063em) and (max-device-width: 64em) and (orientation : portrait){ 
+    /* Hero */
+    #hero p{ width: 90%; margin-top: 2%; margin-bottom: 2%; font-weight:400; line-height: 1.3rem;} #hero h1{margin-top: 2%; }
+    /* How it work */
+    #howitwork #step1, #howitwork #step2, #howitwork #step3, #howitwork #step4 { background-size:62%; padding-top: 7rem }
+    /* Pipeline */
+    #pipeline .pic { width: 100%;} #pipeline .content { width: 100%; clear: both;}
+    .tabs dd > a, .tabs .tab-title > a{ height:auto;}
+    
+    .description .medium-7, .description .medium-4{ width: 100%; }
+    /* Footer */
+   .footer .medium-2:not(:first-child):not(.end) {width: 20%;}
+    /* Pop up */
+    .reveal-modal.large{ width: 90%; }
+}
+
+/* ------  Fix for mobile phone small screen ------ */
+
+
+/* iPhone 6+plus & below */
+@media only screen and (max-device-width : 736px){
+    /* Nav */
+    .top-bar-section li.active:not(.has-form) a:not(.button){ background:#1983dd; border: 0; color: #fff; }
+    .top-bar-section li:not(.has-form) a:not(.button), .top-bar-section li:not(.has-form) a:not(.button):hover { border: 0;}
+    
+    .top-bar.expanded .title-area { background: #fff;}
+    .title.back.js-generated { display: none;}
+    
+    .tabs dd > a, .tabs .tab-title > a { background: #f4f4f4; /*height: 6.8rem;*/ line-height: 1rem; }
+    .tabs dd, .tabs .tab-title { width: 24.78%;}
+    .top-bar .toggle-topbar.menu-icon a span::after{box-shadow: 0 0 0 1px #888, 0 7px 0 1px #888, 0 14px 0 1px #888;}
+    .top-bar .toggle-topbar.menu-icon a { color: #888;}
+    
+    /* pipeline */
+    .tabs dd > a span, .tabs .tab-title > a span{height: 6rem; }
+    .description .medium-7, .description .medium-4{ width: 100%; }
+    
+    /* Popup */
+    .reveal-modal-bg { background:rgba(1,58,107,0.7);}
+}
+/* iPhone 6+plus & below for landscape only */
+@media only screen and (max-device-width : 736px) and (orientation : landscape){
+    /* pipeline */
+    .tabs dd > a span, .tabs .tab-title > a span{height: 4.5rem; }
+}
+
+/* iPhone 6+plus & portrait & below*/
+@media only screen and (max-device-width : 736px) and (orientation : portrait){
+    .panel, #hero { margin-bottom: 1rem;}
+    .top-bar .name { margin-top: 0.7rem;} .top-bar .title-area img { width: 70%;} /* Logo */
+    
+    #hero { background-size: 220% auto; background-position: right top; padding-top: 14rem;}
+    #hero h1, #hero p { margin: 0 1rem;} #hero h1 br { display: none;}
+    #hero h1 { line-height: 1; text-align: center;} #hero p { line-height: 1; margin:0.9rem 1rem;}
+    /* How it work */
+    #howitwork #step1, #howitwork #step2, #howitwork #step3, #howitwork #step4 { width:96%; padding:0; margin:0 auto 0 2%;
+        background-size: contain; background-position: 6% 0; clear: both; min-height: 5.6rem; text-align: left;} 
+    #howitwork #step4 { background-size: auto 80%;}
+    #howitwork #step1 div, #howitwork #step2 div, #howitwork #step3 div, #howitwork #step4 div { margin-left: 35%; margin-right: 0;}
+    .steparrow {margin: 2% auto 1rem 35%; width: 20%; height: 20%; clear: both;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);}
+    
+    .reveal-modal #requestform { border:0;  border-bottom: 1px solid #939ba2; margin-bottom: 1rem;}
+    
+    /* Moral */
+    #requestform { width: 100%; padding: 0;}
+    
+    .footer .medium-2 {width: 50%; margin-bottom: 2rem;}
+}
+
+/* iPhone 6+Plus in landscape */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : landscape) { 
+    /* Nav */
+    .top-bar-section li:not(.collapse) { margin-left: 0.1rem;}
+    .top-bar-section {padding-top: 1rem;}
+    .top-bar ul.right {border-top:0;} 
+    /* Hero */
+    #hero h1{ line-height: 2.2rem; font-size: 2rem;  }
+    #hero p{ width: 60%; font-size: 1rem; margin-top: 2%; margin-bottom: 2%; font-weight:300; line-height: 1.3rem;} 
+    
+    /* How it work */
+    #howitwork #step1, #howitwork #step2, #howitwork #step3, #howitwork #step4 { padding-top: 5rem }
+    #howitwork h3 { line-height: 1.4rem; font-size: 1.2rem; margin-bottom: 0.5rem;}
+    #howitwork div { font-size: 1rem;}
+    
+    /*pipeline */
+    #pipeline .pic { width: 100%;} #pipeline .content { width: 100%; clear: both;}
+    #pipeline .estimate { margin: 5px auto 5px 0; line-height: 3rem;}
+    .tabs dd > a, .tabs .tab-title > a { height: auto; }
+    
+    
+    /* Popup */
+    .reveal-modal #requestform { border-right: 1px solid #939ba2;}
+    .reveal-modal.large {width: 96%;}
+    .reveal-modal .medium-7 { width: 56%;} 
+    .reveal-modal small { float: left;}
+}
+
+/* iPhone 6 */
+@media only screen and (min-device-width: 374px) and (max-device-width: 376px){
+    .reveal-modal .name-field input[type="text"], .reveal-modal .email-field input[type="email"]{ width: 95%; margin-left: 5%;}
+}
+
+/* iPhone 6 in landscape */
+
+@media only screen and (min-device-width: 374px) and (max-device-width: 376px) and (orientation : landscape) {
+    /* Nav */
+    .top-bar-section li:not(.has-form) a:not(.button){padding: 0 0.2rem;}
+    .top-bar ul.right{ border: 0;}
+    .tabs dd > a, .tabs .tab-title > a { height: 4rem; }
+    /* Hero */
+    #hero h1, #hero p { margin-left: 2.4rem;} #hero h1 br{ display: none;}
+    #hero h1 { margin-top: 2rem; }
+    #hero p{ width: 90%; font-size: 0.8rem; line-height: 1rem; font-weight: 300; margin-top: 1.4rem;}
+    /* How it work */
+    #howitwork #step1, #howitwork #step2, #howitwork #step3, #howitwork #step4 { padding-top: 5rem }
+    /* Pipeline */
+    #pipeline .pic { width: 100%;} #pipeline .content { width: 100%; clear: both;}
+    #pipeline .estimate { margin: 5px auto 5px 0; line-height: 3rem;}
+    #pipeline .estimate b { line-height: 4rem;}
+    .tabs dd > a , .tabs .tab-title > a {height: auto;}
+    
+    /* Popup */
+    h2 { font-size: 2rem;}
+    .reveal-modal.large {width: 96%;}
+    .reveal-modal .medium-7 { width: 56%; padding-left: 0;} 
+    .reveal-modal small { float: left;}
+}

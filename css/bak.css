@@ -1,0 +1,45 @@
+/* iPhone 6 in landscape */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+    .top-bar-section li:not(.has-form) a:not(.button){padding: 0 0.7rem;}
+    .top-bar ul.right{ border: 0;}
+    .tabs dd > a, .tabs .tab-title > a { height: 4rem; }
+    #hero h1, #hero p { margin-left: 2.4rem;} #hero h1 br{ display: none;}
+    .reveal-modal #requestform { border-right: 1px solid #939ba2;}
+    .reveal-modal.large {width: 96%;}
+    .reveal-modal .medium-7 { width: 50%;} 
+}
+
+
+/* iPhone5 or less Styles */
+@media only screen and (min-device-width: 319px) and (max-device-width: 321px) {
+    body { background:#ff0000;}
+}
+/* iPhone 5 & 5S */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px){
+    h3 { font-size:1.2rem;}
+    #howitwork #step1 div, #howitwork #step2 div, #howitwork #step3 div, #howitwork #step4 div { 
+        margin-left: 35%; margin-right: 0;}
+    #howitwork #step1, #howitwork #step2, #howitwork #step3, #howitwork #step4{width: 100%; letter-spacing:-1px; text-align: left; }
+    .reveal-modal .column, .reveal-modal .columns { padding: 0;}
+    .reveal-modal form .small-3.columns{ width:33%;}
+}
+
+/* iPhone 5 & 5S in landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape){ 
+    #hero h1 { width: 64%; margin-left: 1rem; font-size: 2.1rem} #hero h1 br{display: none;}
+    #hero p { margin-left: 1rem; width: 90%; font-size: 1rem}
+    
+    #howitwork #step1, #howitwork #step2, #howitwork #step3, #howitwork #step4 { width:95%; padding:0; margin-bottom: 0rem;
+        background-size: contain; background-position: 15% 0; clear: both; min-height: 6.6rem;} 
+    #howitwork #step4 { background-size: auto 90%;}
+    #howitwork #step1 div, #howitwork #step2 div, #howitwork #step3 div, #howitwork #step4 div { margin-left: 40%; margin-right: 0;}
+    .steparrow {margin: 0 auto 1rem 40%; width: auto; height: 50%; clear: both;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);}
+    
+    /* .reveal-modal #requestform { border-bottom: 1px solid #939ba2; border-right: 0px;} */
+    .reveal-modal.large { margin-left: 2%;}
+    
+    .footer .medium-2 {width: 50%; margin-bottom: 2rem;}
+}
